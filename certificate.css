@@ -1,0 +1,106 @@
+/* =========================
+   CERTIFICATES SECTION
+   ========================= */
+#certificates {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 50px;
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.certificates-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ecb604, #e87151, #a6c1ee, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.certificate-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: rgba(255,255,255,0.05);
+  text-align: center;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.certificate-card p {
+  margin: 15px 0;
+  color: #2e0c0c;
+  font-size: 1.1rem;
+}
+
+.certificate-card .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.certificate-card:hover .overlay {
+  opacity: 1;
+}
+
+.certificate-card .overlay a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff7e5f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.certificate-card .overlay a:hover {
+  background: #feb47b;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(177, 174, 174, 0.5);
+}

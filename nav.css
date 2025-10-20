@@ -1,0 +1,40 @@
+/* =========================
+   NAVBAR SECTION
+   ========================= */
+nav {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+nav h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: #00c6ff;
+}
+
